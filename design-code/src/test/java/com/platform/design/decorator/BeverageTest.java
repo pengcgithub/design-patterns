@@ -1,7 +1,7 @@
 package com.platform.design.decorator;
 
 /**
- * <br/>
+ * 装饰者模式测试代码<br/>
  *
  * @author pengc
  * @version v3.1.0
