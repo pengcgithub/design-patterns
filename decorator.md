@@ -38,6 +38,37 @@
 
 #### 装饰模式代码实现
 
+[装饰者代码实现](https://github.com/pengcgithub/design-patterns/tree/master/design-code/src/main/java/com/platform/design/decorator)
 
+## Java IO 中的装饰者模式
+
+#### IO的简单使用
+
+<pre>
+
+File file = new File("C:\\document_files\\github_file\\design-patterns\\input.txt");
+InputStream fileInputStream = new FileInputStream(file);
+BufferedInputStream bufferedInputStream = new BufferedInputStream(fileInputStream);
+
+byte[] buffer = new byte[1024];
+
+OutputStream fileOutputStream = new FileOutputStream(new File("C:\\document_files\\github_file\\design-patterns\\output.txt"));
+
+int bytesRead = 0;
+while ((bytesRead = bufferedInputStream.read(buffer)) != -1) {
+    fileOutputStream.write(buffer);
+}
+
+fileInputStream.close();
+fileOutputStream.close();
+
+</pre>
+
+上述代码`BufferedInputStream`就是对于`FileInputStream`的装饰，赋予了原IO对象更多的功能属性。
+
+#### IO中如何体现装饰
+
+![](https://i.imgur.com/agJmSLU.png)
 
 ## 总结
+
